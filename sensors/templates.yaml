@@ -1,0 +1,48 @@
+- platform: template
+  sensors:
+    smoke_corridor_status:
+      friendly_name: 'Smoke Corridor Status'
+      value_template: >-
+        {% if is_state("sensor.first_alert_corridor_alarm_level", "255") and is_state("sensor.first_alert_corridor_alarm_type", "1")%}
+          smoke
+        {% elif is_state("sensor.first_alert_corridor_alarm_level", "255") and is_state("sensor.first_alert_corridor_alarm_type", "2")%}
+          co
+        {% else %}
+          idle
+        {% endif %}
+      icon_template: >-
+        {% if is_state("sensor.first_alert_corridor_alarm_level", "255") and is_state("sensor.first_alert_corridor_alarm_type", "1")%}
+          mdi:fire
+        {% elif is_state("sensor.first_alert_corridor_alarm_level", "255") and is_state("sensor.first_alert_corridor_alarm_type", "2")%}
+          mdi:cloud-outline
+        {% else %}
+          mdi:smoke-detector
+        {% endif %}
+    smoke_corridor_battery_template:
+      friendly_name: 'Smoke Corridor Battery'
+      value_template: '{{ states.zwave.first_alert_corridor.attributes.battery_level }}'
+      icon_template: 'mdi:battery-outline'
+      unit_of_measurement: '%'
+    smoke_diner_status:
+      friendly_name: 'Smoke Diner Status'
+      value_template: >-
+        {% if is_state("sensor.first_alert_diner_alarm_level", "255") and is_state("sensor.first_alert_diner_alarm_type", "1")%}
+          smoke
+        {% elif is_state("sensor.first_alert_diner_alarm_level", "255") and is_state("sensor.first_alert_diner_alarm_type", "2")%}
+          co
+        {% else %}
+          idle
+        {% endif %}
+      icon_template: >-
+        {% if is_state("sensor.first_alert_diner_alarm_level", "255") and is_state("sensor.first_alert_diner_alarm_type", "1")%}
+          mdi:fire
+        {% elif is_state("sensor.first_alert_diner_alarm_level", "255") and is_state("sensor.first_alert_diner_alarm_type", "2")%}
+          mdi:cloud-outline
+        {% else %}
+          mdi:smoke-detector
+        {% endif %}
+    smoke_diner_battery_template:
+      friendly_name: 'Smoke Diner Battery'
+      value_template: '{{ states.zwave.first_alert_diner.attributes.battery_level }}'
+      icon_template: 'mdi:battery-outline'
+      unit_of_measurement: '%'

@@ -1,0 +1,43 @@
+
+# Configure a default setup of Home Assistant (frontend, api, etc)
+default_config:
+
+# Uncomment this if you are using SSL/TLS, running in Docker container, etc.
+# http:
+#   base_url: example.duckdns.org:8123
+
+# Text to speech
+tts:
+  - platform: google_translate
+
+group: !include groups.yaml
+automation: !include automations.yaml
+script: !include scripts.yaml
+scene: !include scenes.yaml
+sensor: !include_dir_merge_list sensors
+
+mqtt_statestream:
+  base_topic: homeassistant
+  publish_attributes: true
+  publish_timestamps: true
+
+homekit:
+  auto_start: false
+  filter:
+    include_domains:
+      - light
+    include_entities:
+      - sensor.garage_sensor_temperature
+      - sensor.kids_bedroom_sensor_temperature
+      - switch.honeywell_unknown_type_4952_id_3036_switch
+  entity_config:
+    light.honeywell_39351_zw3005_in_wall_smart_dimmer_level:
+      name: Mirror Light
+    light.honeywell_39351_zw3005_in_wall_smart_dimmer_level_2:
+      name: Ceiling Light
+    light.honeywell_39351_zw3005_in_wall_smart_dimmer_level_3:
+      name: Ceiling Light
+    light.honeywell_39351_zw3005_in_wall_smart_dimmer_level_4:
+      name: Dining light
+    switch.honeywell_unknown_type_4952_id_3036_switch:
+      name: Countertop Light
