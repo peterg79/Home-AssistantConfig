@@ -41,3 +41,13 @@ homekit:
       name: Dining light
     switch.honeywell_unknown_type_4952_id_3036_switch:
       name: Countertop Light
+
+homeassistant:
+  latitude: !secret home_latitude
+  longitude: !secret home_longitude
+  elevation: !secret home_elevation
+  unit_system: metric
+  time_zone: America/Los_Angeles
+  name: Home
+  whitelist_external_dirs:
+    - /tmp
