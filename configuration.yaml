@@ -43,6 +43,7 @@ homekit:
       name: Countertop Light
 
 homeassistant:
+  customize: !include customize.yaml
   latitude: !secret home_latitude
   longitude: !secret home_longitude
   elevation: !secret home_elevation
@@ -51,3 +52,14 @@ homeassistant:
   name: Home
   whitelist_external_dirs:
     - /tmp
+
+mqtt:
+  discovery: true
+  discovery_prefix: megaio
+
+recorder:
+  db_url: mysql://hass:CR6aFsYsBzd8?utZdVT*W8WR@core-mariadb/homeassistant?charset=utf8
+  purge_keep_days: 999
+pi_hole:
+  - host: 172.27.201.2
+    api_key: !secret pihole_api_token

@@ -1,5 +1,5 @@
 - platform: onewire
-  host: 172.27.201.26
+  host: 127.0.0.1
   port: 4304
   names:
     28.83083C050000: 1W-Temp1
