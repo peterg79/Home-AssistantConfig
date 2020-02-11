@@ -1,0 +1,11 @@
+megaio:
+  name: MegaIO
+  entities:
+    - switch.megaio_relay_1
+    - switch.megaio_relay_2
+    - switch.megaio_relay_3
+    - switch.megaio_relay_4
+    - switch.megaio_relay_5
+    - switch.megaio_relay_6
+    - switch.megaio_relay_7
+    - switch.megaio_relay_8

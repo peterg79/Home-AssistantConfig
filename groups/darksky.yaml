@@ -1,20 +1,3 @@
-one_wire:
-  name: 1-Wire
-  entities:
-    - sensor.1w_temp1_temperature
-    - sensor.1w_temp2_temperature
-pi_hole:
-  name: Pi-Hole
-  entities:
-    - sensor.pi_hole_ads_blocked_today
-    - sensor.pi_hole_ads_percentage_blocked_today
-    - sensor.pi_hole_dns_queries_cached
-    - sensor.pi_hole_dns_queries_forwarded
-    - sensor.pi_hole_dns_queries_today
-    - sensor.pi_hole_dns_unique_clients
-    - sensor.pi_hole_dns_unique_domains
-    - sensor.pi_hole_domains_blocked
-    - sensor.pi_hole_seen_clients
 dark_sky:
   name: Dark Sky
   entities:

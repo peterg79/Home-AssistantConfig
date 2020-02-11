@@ -1,0 +1,5 @@
+one_wire:
+  name: 1-Wire
+  entities:
+    - sensor.1w_temp1_temperature
+    - sensor.1w_temp2_temperature
