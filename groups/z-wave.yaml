@@ -1,0 +1,21 @@
+zwave:
+  name: Z-Wave
+  entities:
+    - zwave.aeon_labs_zw090_z_stick_gen5_us
+    - zwave.guest_bathroom_mirror_light
+    - zwave.guest_bathroom_ceiling_light
+    - zwave.kitchen_ceiling_light
+    - zwave.dining_room_light
+    - zwave.kitchen_countertop_light
+    - zwave.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector
+    - zwave.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_2
+    - zwave.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_3
+    - sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_type
+    - sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_level
+    - sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_battery_level
+    - sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_type_2
+    - sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_level_2
+    - sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_battery_level_2
+    - sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_type_3
+    - sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_alarm_level_3
+    - sensor.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_battery_level_3

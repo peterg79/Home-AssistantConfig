@@ -1,11 +1,9 @@
-- platform: template
+- platform: command_line
+  scan_interval: 5
   switches:
     pihole:
-      friendly_name: Pi-Hole
-      value_template: "{{ is_state('sensor.pi_hole_status', 'enabled') }}"
-      turn_on:
-        service: pi_hole.enable
-      turn_off:
-        service: pi_hole.disable
-        data:
-          duration: "00:01:00"
+      friendly_name: "Ad Blocking"
+      command_on: "/config/scripts/pihole.py --enable"
+      command_off: "/config/scripts/pihole.py --disable"
+      command_state: "/config/scripts/pihole.py --status"
+      value_template: "{{ value_json.status == 'enabled' }}"

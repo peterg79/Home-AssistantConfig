@@ -15,6 +15,12 @@ automation: !include automations.yaml
 script: !include scripts.yaml
 scene: !include scenes.yaml
 sensor: !include_dir_merge_list sensors
+switch: !include_dir_merge_list switches
+
+zwave:
+    usb_path: /dev/serial/by-id/usb-0658_0200-if00
+    network_key: "0x6A, 0x7F, 0x13, 0x1F, 0x5E, 0x4F, 0x2A, 0xCE, 0xFF, 0x49, 0xD0, 0xD3, 0xF5, 0xF9, 0xAF, 0x9A"
+    device_config: !include zwave_device_config.yaml
 
 mqtt_statestream:
   base_topic: homeassistant
@@ -29,17 +35,22 @@ homekit:
     include_entities:
       - sensor.garage_sensor_temperature
       - sensor.kids_bedroom_sensor_temperature
-      - switch.honeywell_unknown_type_4952_id_3036_switch
+      - switch.kitchen_countertop_light
   entity_config:
-    light.honeywell_39351_zw3005_in_wall_smart_dimmer_level:
+    light.guest_bathroom_mirror_light:
+      # light.honeywell_39351_zw3005_in_wall_smart_dimmer_level
       name: Mirror Light
-    light.honeywell_39351_zw3005_in_wall_smart_dimmer_level_2:
+    light.guest_bathroom_ceiling_light:
+      # light.honeywell_39351_zw3005_in_wall_smart_dimmer_level_2
       name: Ceiling Light
-    light.honeywell_39351_zw3005_in_wall_smart_dimmer_level_3:
+    light.kitchen_ceiling_light:
+      # light.honeywell_39351_zw3005_in_wall_smart_dimmer_level_3
       name: Ceiling Light
-    light.honeywell_39351_zw3005_in_wall_smart_dimmer_level_4:
+    light.dining_room_light:
+      # light.honeywell_39351_zw3005_in_wall_smart_dimmer_level_4
       name: Dining light
-    switch.honeywell_unknown_type_4952_id_3036_switch:
+    switch.kitchen_countertop_light:
+      # switch.honeywell_unknown_type_4952_id_3036_switch
       name: Countertop Light
 
 homeassistant:
@@ -63,7 +74,6 @@ recorder:
   purge_keep_days: 999
 
 pi_hole:
-  - host: 172.27.201.2
+  - host: !secret pihole_api_host
     api_key: !secret pihole_api_token
 
-switch: !include_dir_merge_list switches

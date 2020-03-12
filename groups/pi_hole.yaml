@@ -10,5 +10,4 @@ pi_hole:
     - sensor.pi_hole_dns_unique_domains
     - sensor.pi_hole_domains_blocked
     - sensor.pi_hole_seen_clients
-    - sensor.pi_hole_status
     - switch.pihole
