@@ -36,6 +36,9 @@ homekit:
       - sensor.garage_sensor_temperature
       - sensor.kids_bedroom_sensor_temperature
       - switch.kitchen_countertop_light
+      - switch.shed_inside_light
+      - switch.pihole
+      - switch.megaio_relay_1
   entity_config:
     light.guest_bathroom_mirror_light:
       # light.honeywell_39351_zw3005_in_wall_smart_dimmer_level
@@ -52,6 +55,16 @@ homekit:
     switch.kitchen_countertop_light:
       # switch.honeywell_unknown_type_4952_id_3036_switch
       name: Countertop Light
+    switch.shed_inside_light:
+      # switch.honeywell_unknown_type_4952_id_3036_switch_2
+      name: Shed Inside Light
+    light.shed_outside_light:
+      # light.honeywell_39351_zw3005_in_wall_smart_dimmer_level_5
+      name: Shed Outside_light
+    switch.pihole:
+      name: Ad Blocker
+    switch.megaio_relay_1:
+      name: Relay 1
 
 homeassistant:
   customize: !include customize.yaml

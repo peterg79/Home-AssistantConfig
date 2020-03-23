@@ -7,6 +7,8 @@ zwave:
     - zwave.kitchen_ceiling_light
     - zwave.dining_room_light
     - zwave.kitchen_countertop_light
+    - zwave.shed_inside_light
+    - zwave.shed_outside_light
     - zwave.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector
     - zwave.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_2
     - zwave.first_alert_brk_brands_inc_zcombo_smoke_and_carbon_monoxide_detector_3
