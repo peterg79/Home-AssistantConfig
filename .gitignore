@@ -9,6 +9,7 @@
 !sensors
 !switches
 !groups
+!*.sh
 
 # Ignore folders.
 .storage
